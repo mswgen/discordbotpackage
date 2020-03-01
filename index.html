@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>디스코드 봇 package.json 생성기</title>
+        <script src="script.js"></script>
+        <style>
+            .disable {
+                display: none;
+            }
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>디스코드 봇  package.json 생성기</h1>
+        <div id="step1">
+            <p>1. 먼저 봇의 이름을 입력해주세요.</p>
+            <input type="text" id="botname">
+            <input type="button" value="다음" onclick="
+                next('#step1', '#step2');
+                name = document.querySelector('#botname').innerHTML;
+            ">
+        </div>
+        <div id="step2" class="disable">
+            <p>2. 이제 봇의 시작 파일 이름(.js 제외)을 입력해주세요.</p>
+            <input type="text" id="startfile">
+            <input type="button" value="다음" onclick="
+                next('#step2', '#step3')
+                start = document.querySelector('#startfile').innerHTML;
+            ">
+        </div>
+        <div id="step3" class="disable">
+            <p>3. 마지막으로 봇의 메인 파일(.js 제외)를 입력합니다.</p>
+            <input type="text" id="mainfile">
+            <input type="button" value="완료" onclick="
+                main = document.querySelector('#mainfile').innerHTML;
+                done('#step3', '#result');
+            ">
+        </div>
+        <div id="result" class="disable">
+            <p>결과</p>
+            <div id="resultText"></div>
+            <p>(참고로 필요한 패키지들은 npm i <패키지 이름> 명령어를 콘솔에 입력해 설치하면 됩니다.)</p>
+        </div>
+    </body>
+</html>
