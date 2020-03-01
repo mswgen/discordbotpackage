@@ -23,30 +23,45 @@
             <h2>1. 먼저 봇의 이름을 영어로 입력해주세요.</h2>
             <input type="text" id="botname">
             <input type="button" value="다음" onclick="
-                next('#step1', '#step2');
+                next('#step1', '#step2', '#index1', '#index2');
                 botname = document.querySelector('#botname').value;
+                document.querySelector('#index1').innerHTML = '1. 봇의 이름을 영어로 입력: ' + botname;
             ">
+        </div>
+        <div id="index1" class="disable">
+            1. 봇의 이름을 영어로 입력
         </div>
         <div id="step2" class="disable">
             <h2>2. 이제 봇의 시작 파일 이름(.js 제외)을 입력해주세요.</h2>
             <input type="text" id="startfile">
             <input type="button" value="다음" onclick="
-                next('#step2', '#step3')
+                next('#step2', '#step3', '#index2', '#index3')
                 start = document.querySelector('#startfile').value;
+                document.querySelector('#index2').innerHTML = '2. 봇의 시작 파일 이름: ' + start + '.js';
             ">
+        </div>
+        <div id="index2">
+            2. 봇의 시작 파일 이름(.js 제외) 입력
         </div>
         <div id="step3" class="disable">
             <h2>3. 마지막으로 봇의 메인 파일(.js 제외)를 입력합니다.</h2>
             <input type="text" id="mainfile">
             <input type="button" value="완료" onclick="
                 main = document.querySelector('#mainfile').value;
-                done('#step3', '#result', '#resultText');
+                document.querySelector('#index3').innerHTML = '3. 봇의 메인 파일 이름: ' + main + '.js';
+                done('#step3', '#result', '#resultText', '#index3', '#index4');
             ">
+        </div>
+        <div id="index3">
+            3. 봇의 메인 파일 이름(.js 제외) 입력
         </div>
         <div id="result" class="disable">
             <h2>결과</h2>
             <p id="resultText"></p>
             <p>(참고로 필요한 패키지들은 npm i <패키지 이름> 명령어를 콘솔에 입력해 설치하면 됩니다.)</p>
+        </div>
+        <div id="index4">
+            4. 결과
         </div>
     </body>
 </html>
