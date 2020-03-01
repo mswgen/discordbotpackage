@@ -20,7 +20,7 @@
     <body>
         <h1>디스코드 봇 package.json 생성기</h1>
         <div id="step1">
-            <p>1. 먼저 봇의 이름을 영어로 입력해주세요.</p>
+            <h2>1. 먼저 봇의 이름을 영어로 입력해주세요.</h2>
             <input type="text" id="botname">
             <input type="button" value="다음" onclick="
                 next('#step1', '#step2');
@@ -28,7 +28,7 @@
             ">
         </div>
         <div id="step2" class="disable">
-            <p>2. 이제 봇의 시작 파일 이름(.js 제외)을 입력해주세요.</p>
+            <h2>2. 이제 봇의 시작 파일 이름(.js 제외)을 입력해주세요.</h2>
             <input type="text" id="startfile">
             <input type="button" value="다음" onclick="
                 next('#step2', '#step3')
@@ -36,15 +36,15 @@
             ">
         </div>
         <div id="step3" class="disable">
-            <p>3. 마지막으로 봇의 메인 파일(.js 제외)를 입력합니다.</p>
+            <h2>3. 마지막으로 봇의 메인 파일(.js 제외)를 입력합니다.</h2>
             <input type="text" id="mainfile">
             <input type="button" value="완료" onclick="
                 main = document.querySelector('#mainfile').value;
-                done('#step3', '#result');
+                done('#step3', '#result', '#resultText');
             ">
         </div>
         <div id="result" class="disable">
-            <p>결과</p>
+            <h2>결과</h2>
             <div id="resultText"></div>
             <p>(참고로 필요한 패키지들은 npm i <패키지 이름> 명령어를 콘솔에 입력해 설치하면 됩니다.)</p>
         </div>
