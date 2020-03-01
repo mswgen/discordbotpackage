@@ -24,7 +24,7 @@
             <input type="text" id="botname">
             <input type="button" value="다음" onclick="
                 next('#step1', '#step2');
-                name = document.querySelector('#botname').innerHTML;
+                name = document.querySelector('#botname').value;
             ">
         </div>
         <div id="step2" class="disable">
@@ -32,14 +32,14 @@
             <input type="text" id="startfile">
             <input type="button" value="다음" onclick="
                 next('#step2', '#step3')
-                start = document.querySelector('#startfile').innerHTML;
+                start = document.querySelector('#startfile').value;
             ">
         </div>
         <div id="step3" class="disable">
             <p>3. 마지막으로 봇의 메인 파일(.js 제외)를 입력합니다.</p>
             <input type="text" id="mainfile">
             <input type="button" value="완료" onclick="
-                main = document.querySelector('#mainfile').innerHTML;
+                main = document.querySelector('#mainfile').value;
                 done('#step3', '#result');
             ">
         </div>
