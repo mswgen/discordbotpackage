@@ -6,7 +6,7 @@ function next(firstid, nextid){
     document.querySelector(firstid).style.display = "none";
     document.querySelector(nextid).style.display = "block";
 }
-function done(inputid, resultid){
+function done(inputid, resultid, textid){
     document.querySelector(inputid).style.display = "none";
     result = `{\n
         "name": "` + botname + `",\n
@@ -25,6 +25,6 @@ function done(inputid, resultid){
           "discord.js": "^11.6.1"\n
         }\n
       }`;
-    document.querySelector(resultid).innerHTML = result;
+    document.querySelector(textid).innerHTML = result;
     document.querySelector(resultid).style.display = "block";
 }
