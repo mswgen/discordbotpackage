@@ -2,11 +2,13 @@ var botname = null;
 var start = null;
 var main = null;
 var result = null;
-function next(firstid, nextid){
+function next(firstid, nextid, firstind, lastind){
     document.querySelector(firstid).style.display = "none";
+    document.querySelector(firstind).style.display = "block";
     document.querySelector(nextid).style.display = "block";
+    document.querySelector(lastind).style.display = "none";
 }
-function done(inputid, resultid, textid){
+function done(inputid, resultid, textid, firstind, lastind){
     document.querySelector(inputid).style.display = "none";
     result = `{\n
         "name": "` + botname + `",\n
@@ -25,6 +27,8 @@ function done(inputid, resultid, textid){
           "discord.js": "^11.6.1"\n
         }\n
       }`;
+    document.querySelector(firstind).style.display = "block";
+    document.querySelector(lastind).style.display = "none";
     document.querySelector(textid).innerHTML = result;
     document.querySelector(resultid).style.display = "block";
 }
