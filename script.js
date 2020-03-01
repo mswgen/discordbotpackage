@@ -8,23 +8,23 @@ function next(firstid, nextid){
 }
 function done(inputid, resultid){
     document.querySelector(inputid).style.display = "none";
-    result = `{
-        "name": "` + botname + `",
-        "version": "1.0.0",
-        "description": "discord bot",
-        "main": "` + main + `.js",
-        "scripts": {
-          "start": "node ` + start + `.js"
-        },
-        "keywords": [
-          "` + botname + `"
-        ],
-        "author": "",
-        "license": "UNLICENSED",
-        "dependencies": {
-          "discord.js": "^11.6.1"
-        }
+    result = `{\n
+        "name": "` + botname + `",\n
+        "version": "1.0.0",\n
+        "description": "discord bot",\n
+        "main": "` + main + `.js",\n
+        "scripts": {\n
+          "start": "node ` + start + `.js"\n
+        },\n
+        "keywords": [\n
+          "` + botname + `"\n
+        ],\n
+        "author": "",\n
+        "license": "UNLICENSED",\n
+        "dependencies": {\n
+          "discord.js": "^11.6.1"\n
+        }\n
       }`;
-    document.querySelector(resultid).innerHTML = done;
+    document.querySelector(resultid).innerHTML = result;
     document.querySelector(resultid).style.display = "block";
 }
