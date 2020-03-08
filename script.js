@@ -11,21 +11,25 @@ function next(firstid, nextid, firstind, lastind){
 function done(inputid, resultid, textid, firstind, lastind){
     document.querySelector(inputid).style.display = "none";
     result = `{\n
-        "name": "` + botname + `",\n
-        "version": "1.0.0",\n
-        "description": "discord bot",\n
-        "main": "` + main + `.js",\n
-        "scripts": {\n
-          "start": "node ` + start + `.js"\n
-        },\n
-        "keywords": [\n
-          "` + botname + `"\n
-        ],\n
-        "author": "",\n
-        "license": "UNLICENSED",\n
-        "dependencies": {\n
-          "discord.js": "^11.6.1"\n
-        }\n
+        "name": "` + botname + `",<br>
+        "version": "1.0.0",<br>
+        "description": "discord bot",<br>
+        "main": "` + main + `.js",<br>
+        "scripts": {<br>
+            "start": "node ` + start + `.js"<br>
+        },<br>
+        "keywords": [<br>
+          "` + botname + `"<br>
+        ],<br>
+        "engines": {<br>
+            "node": "12.x"
+        },<br>
+        "author": "",<br>
+        "license": "UNLICENSED",<br>
+        "dependencies": {<br>
+            "discord.js": "^12.0.1",<br>
+            "dotenv": "^8.2.0"<br>
+        }<br>
       }`;
     document.querySelector(firstind).style.display = "block";
     document.querySelector(lastind).style.display = "none";
