@@ -22,7 +22,7 @@ function done(inputid, resultid, textid, firstind, lastind){
           "` + botname + `"<br>
         ],<br>
         "engines": {<br>
-            "node": "12.x"
+            "node": "12.x"<br>
         },<br>
         "author": "",<br>
         "license": "UNLICENSED",<br>
